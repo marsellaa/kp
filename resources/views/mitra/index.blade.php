@@ -2,35 +2,52 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Mitra</h1>
-    <p class="mb-4">Tabel Data Mitra</p>
-    @if (Auth::user()->id_role === 1)
-        <a href="{{ route('mitra.create') }}" class="btn btn-primary m-1 mb-2">Tambah</a>
-    @endif
+    <div class="d-flex align-items-center mb-4 justify-content-between">
+        <div>
+            <h1 class="h3 text-gray-800">PEH EDUKASI HOESIN'ERS</h1>
+            <p class="mb-4">Tabel Kegiatan PEH</p>
+        </div>
+        @if (Auth::user()->id_role === 1)
+            <div>
+                <a href="{{ route('peh.create') }}" class="btn btn-simple mb-4">Tambah</a>
+                <a href="{{ route('peh.downloadPdf') }}" class="btn btn-simple mb-4">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        @endif
+    </div>
 
     <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nama Mitra</th>
-                    <th>Alamat</th>
+                    <th>Tanggal</th>
+                    <th>Nama Narasumber</th>
+                    <th>Spesialisasi</th>
+                    <th>Unit Kerja</th>
+                    <th>Tema</th>
+                    <th>Status</th>
+                    <th>Host</th>
                     <th>Edit | Delete</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($mitra as $item)
+                @foreach($peh as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
-                    <td>{{ $item->nama }}</td>
-                    <td>{{ $item->alamat }}</td>
+                    <td>{{ $item->tgl }}</td>
+                    <td>{{ $item->dokter->nama }}</td>
+                    <td>{{ $item->dokter->spesialisasi }}</td>
+                    <td>{{ $item->dokter->subdivisi }}</td>
+                    <td>{{ $item->tema }}</td>
+                    <td>{{ $item->status }}</td>
+                    <td>{{ $item->user->name }}</td>
                     <td>
                         @if (Auth::user()->id === $item->id_user || Auth::user()->id_role === 1)
-                            <a href="{{ route('mitra.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('mitra.destroy', $item->id) }}" method="POST" style="display:inline;">
+                            <a href="{{ route('peh.edit', $item->id) }}" class="btn btn-simple btn-edit">Edit</a>
+                            <form action="{{ route('peh.destroy', $item->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger show_confirm" data-nama="{{ $item->nama }}">Hapus</button>
+                                <button type="submit" class="btn btn-simple btn-delete show_confirm" data-nama="{{ $item->tema }}">Hapus</button>
                             </form>
                         @endif
                     </td>

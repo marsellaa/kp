@@ -43,6 +43,39 @@
         "Liberation Mono", "Courier New", monospace;
 }
 
+.btn-simple {
+    background-color: #6c757d; /* Warna abu-abu yang lebih lembut */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-simple:hover {
+    background-color: #5a6268; /* Warna sedikit lebih gelap saat hover */
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Warna kuning lembut */
+}
+
+.btn-edit:hover {
+    background-color: #e0a800; /* Warna sedikit lebih gelap saat hover */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Warna merah lembut */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Warna sedikit lebih gelap saat hover */
+}
+
+
 .text-wrap {
     white-space: normal !important;
     word-wrap: break-word;

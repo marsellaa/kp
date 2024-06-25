@@ -31,8 +31,6 @@ Route::middleware('auth')->group(function () {
         return view('about');
     })->name('about');
 
-
-
     // Halaman PEH
     Route::get('/peh', 'PehController@index')->name('peh.index');
     Route::get('/peh/create', 'PehController@create')->name('peh.create');
@@ -40,7 +38,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/peh/{peh}/edit', 'PehController@edit')->name('peh.edit');
     Route::put('/peh/{peh}', 'PehController@update')->name('peh.update');
     Route::delete('/peh/{id}', 'PehController@destroy')->name('peh.destroy');
-    Route::post('/peh/print', 'PehController@print')->name('peh.print');
     Route::get('/peh/download-pdf', 'PehController@downloadPdf')->name('peh.downloadPdf');
 
     // Halaman Mitra
@@ -50,7 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/mitra/{mitra}/edit', 'mitraController@edit')->name('mitra.edit');
     Route::put('/mitra/{mitra}', 'mitraController@update')->name('mitra.update');
     Route::delete('/mitra/{id}', 'mitraController@destroy')->name('mitra.destroy');
-    Route::post('/mitra/print', 'mitraController@print')->name('mitra.print');
+    
 
     // Halaman Partisipan
     Route::get('/partisipan', 'partisipanController@index')->name('partisipan.index');
@@ -59,7 +56,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/partisipan/{partisipan}/edit', 'partisipanController@edit')->name('partisipan.edit');
     Route::put('/partisipan/{partisipan}', 'partisipanController@update')->name('partisipan.update');
     Route::delete('/partisipan/{id}', 'partisipanController@destroy')->name('partisipan.destroy');
-    Route::post('/partisipan/print', 'partisipanController@print')->name('partisipan.print');
 
     // Halaman Pertanyaan
     Route::get('/pertanyaan', 'pertanyaanController@index')->name('pertanyaan.index');
@@ -68,7 +64,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/pertanyaan/{pertanyaan}/edit', 'pertanyaanController@edit')->name('pertanyaan.edit');
     Route::put('/pertanyaan/{pertanyaan}', 'pertanyaanController@update')->name('pertanyaan.update');
     Route::delete('/pertanyaan/{id}', 'pertanyaanController@destroy')->name('pertanyaan.destroy');
-    Route::post('/pertanyaan/print', 'pertanyaanController@print')->name('pertanyaan.print');
 
     //Halaman Donor Darah
     Route::get('/donordarah', 'DonorDarahController@index')->name('donordarah.index');
@@ -86,7 +81,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/feedback/{feedback}/edit', 'FeedbackController@edit')->name('feedback.edit');
     Route::put('/feedback/{feedback}', 'FeedbackController@update')->name('feedback.update');
     Route::delete('/feedback/{id}', 'FeedbackController@destroy')->name('feedback.destroy');
-    Route::post('/feedback/print', 'FeedbackController@print')->name('feedback.print');
 
     // Halaman HealthTalk
     Route::get('/healthtalk', 'HealthTalkController@index')->name('healthtalk.index');
@@ -120,7 +114,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/kerjasama_nonbpjs/{kerjasama_nonbpjs}', 'KerjaSamaNonBpjsController@update')->name('kerjasama_nonbpjs.update');
     Route::delete('/kerjasama_nonbpjs/{kerjasama_nonbpjs}', 'KerjaSamaNonBpjsController@destroy')->name('kerjasama_nonbpjs.destroy');
 
-    //Halaman Kerja Sama Non BPJS
+    //Halaman Video
     Route::get('/video', 'VideoController@index')->name('video.index');
     Route::get('/video/create', 'VideoController@create')->name('video.create');
     Route::post('/video', 'VideoController@store')->name('video.store');
@@ -128,7 +122,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/video/{video}', 'VideoController@update')->name('video.update');
     Route::delete('/video/{video}', 'VideoController@destroy')->name('video.destroy');
 
-    //Halaman Kerja Sama Non BPJS
+    //Halaman flyer
     Route::get('/flyer', 'FlyerController@index')->name('flyer.index');
     Route::get('/flyer/create', 'FlyerController@create')->name('flyer.create');
     Route::post('/flyer', 'FlyerController@store')->name('flyer.store');

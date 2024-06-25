@@ -28,11 +28,11 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">PEH (Bulan ini)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['pehCountThisMonth'] }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-hospital fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -45,11 +45,11 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Health Talk</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['healthtalk'] }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-heartbeat fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -58,14 +58,31 @@
 
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Donor Darah</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['donordarah'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-tint fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example
+        <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Donor Darah</div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $widget['donordarah'] }}%</div>
                                 </div>
                                 <div class="col">
                                     <div class="progress progress-sm mr-2">
@@ -80,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Users -->
         <div class="col-xl-3 col-md-6 mb-4">
@@ -98,176 +115,155 @@
                 </div>
             </div>
         </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Feedback</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['feedback'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-pencil-square fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Kerja Sama Non BPJS</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['kerjasamanonbpjs'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-handshake fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Kunjungan Mitra</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['kjmitra'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-link fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">{{ __('Mitra') }}</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['mitras'] }}</div>
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Info dan Komplain</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['infodankomplain'] }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                            <i class="fas fa-info fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Persentase PEH Terlaksana -->
-    <div class="col-xl-6 col-md-12 mb-4">
-        <div class="card shadow py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Persentase PEH Terlaksana</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ number_format($widget['pehPercentage'], 2) }}%</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Flyer</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['flyer'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-newspaper fa-2x text-gray-300"></i>
+                        </div>
                     </div>
                 </div>
-                <canvas id="pehChart"></canvas>
             </div>
         </div>
-    </div>
 
-    <!-- Persentase HealthTalk Terlaksana -->
-    <div class="col-xl-6 col-md-12 mb-4">
-        <div class="card shadow py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Persentase HealthTalk Terlaksana</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ number_format($widget['healthTalkPercentage'], 2) }}%</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">{{ __('Video') }}</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $widget['video'] }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-play fa-2x text-gray-300"></i>
+                        </div>
                     </div>
                 </div>
-                <canvas id="healthTalkChart"></canvas>
             </div>
         </div>
-    </div>
-</div>
 
+        <!-- Tambahkan row baru di sini untuk presentase -->
     <div class="row">
-
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
-
-            <!-- Project Card Example -->
+        <div class="col-lg-12 mb-4">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Presentase</h6>
                 </div>
                 <div class="card-body">
-                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
+                    <div class="row">
+                        <!-- Persentase PEH Terlaksana -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Persentase PEH Terlaksana</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ number_format($widget['pehYaPercentage'], 2) }}%</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <canvas id="pehChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- Color System -->
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-primary text-white shadow">
-                        <div class="card-body">
-                            Primary
-                            <div class="text-white-50 small">#4e73df</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-success text-white shadow">
-                        <div class="card-body">
-                            Success
-                            <div class="text-white-50 small">#1cc88a</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-info text-white shadow">
-                        <div class="card-body">
-                            Info
-                            <div class="text-white-50 small">#36b9cc</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-warning text-white shadow">
-                        <div class="card-body">
-                            Warning
-                            <div class="text-white-50 small">#f6c23e</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-danger text-white shadow">
-                        <div class="card-body">
-                            Danger
-                            <div class="text-white-50 small">#e74a3b</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-secondary text-white shadow">
-                        <div class="card-body">
-                            Secondary
-                            <div class="text-white-50 small">#858796</div>
+                        <!-- Persentase HealthTalk Terlaksana -->
+                        <div class="col-xl-6 col-md-12 mb-4">
+                            <div class="card shadow py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Persentase HealthTalk Terlaksana</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ number_format($widget['healthTalkYaPercentage'], 2) }}%</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-pie fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <canvas id="healthTalkChart"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-
-        <div class="col-lg-6 mb-4">
-
-            <!-- Illustrations -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                </div>
-                <div class="card-body">
-                    <div class="text-center">
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="{{ asset('img/svg/undraw_editable_dywm.svg') }}" alt="">
-                    </div>
-                    <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw →</a>
-                </div>
-            </div>
-
-            <!-- Approach -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                </div>
-                <div class="card-body">
-                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                    <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
-                </div>
-            </div>
-
         </div>
     </div>
+
 @endsection
 
 @push('scripts')
@@ -280,29 +276,15 @@
             data: {
                 labels: ['Terlaksana', 'Tidak Terlaksana', 'Pending'],
                 datasets: [{
-                    data: [{{ $widget['pehPercentage'] }}, 100 - {{ $widget['pehPercentage'] }}, 0],
-                    backgroundColor: ['#4e73df', '#e74a3b', '#f6c23e'],
-                    hoverBackgroundColor: ['#2e59d9', '#c9302c', '#f4b619'],
+                    data: [<?php echo number_format($widget["pehYaPercentage"], 2) ?>, <?php echo number_format($widget["pehTidakPercentage"], 2) ?>, <?php echo number_format($widget["pehPendingPercentage"],2)?>],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205,86)'],
                     hoverBorderColor: 'rgba(234, 236, 244, 1)',
                 }],
             },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                    backgroundColor: 'rgb(255,255,255)',
-                    bodyFontColor: '#858796',
-                    borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
-                    displayColors: false,
-                    caretPadding: 10,
-                },
-                legend: {
-                    display: false,
-                },
-                cutoutPercentage: 80,
-            },
+            
         });
 
         // HealthTalk Chart
@@ -312,29 +294,15 @@
             data: {
                 labels: ['Terlaksana', 'Tidak Terlaksana', 'Pending'],
                 datasets: [{
-                    data: [{{ $widget['healthTalkPercentage'] }}, 100 - {{ $widget['healthTalkPercentage'] }}, 0],
-                    backgroundColor: ['#4e73df', '#e74a3b', '#f6c23e'],
-                    hoverBackgroundColor: ['#2e59d9', '#c9302c', '#f4b619'],
+                    data: [<?php echo number_format($widget["healthTalkYaPercentage"], 2) ?>, <?php echo number_format($widget["healthTalkTidakPercentage"], 2) ?>, <?php echo number_format($widget["healthTalkPendingPercentage"],2)?>],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205,86)'],
                     hoverBorderColor: 'rgba(234, 236, 244, 1)',
                 }],
             },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                    backgroundColor: 'rgb(255,255,255)',
-                    bodyFontColor: '#858796',
-                     borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
-                    displayColors: false,
-                    caretPadding: 10,
-                },
-                legend: {
-                    display: false,
-                },
-                cutoutPercentage: 80,
-            },
+            
         });
     });
 </script>
